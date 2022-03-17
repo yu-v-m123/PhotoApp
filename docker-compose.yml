@@ -1,0 +1,21 @@
+version: '3'
+services:
+  app:
+    build: .
+    volumes:
+      - ./app:/var/www/html/app
+    ports:
+      - 8081:8081
+      - 3000:3000
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: rootroot
+      MYSQL_DATABASE: database
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+      TZ: 'Asia/Tokyo'
+    volumes:
+      - ./db:/var/lib/mysql
+    ports:
+      - 5434:5432
