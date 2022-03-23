@@ -10,15 +10,15 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 class RegisterApiTest extends TestCase
 {
   use RefreshDatabase;
-    /**
-     * A basic feature test example.
-     *
-     * @return void
-     */
-    public function test_user_create_response()
-    {
+  /**
+   * A basic feature test example.
+   *
+   * @return void
+   */
+  public function testRegisterResponse()
+  {
       $data = [
-        'name' => 'vuesplash user',
+        'name' => 'usertest',
         'email' => 'dummy@email.com',
         'password' => 'test1234',
         'password_confirmation' => 'test1234',
