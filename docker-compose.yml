@@ -9,6 +9,7 @@ services:
       - 3000:3000
   db:
     image: mysql:5.7
+    container_name: db
     environment:
       MYSQL_ROOT_PASSWORD: rootroot
       MYSQL_DATABASE: database
@@ -18,4 +19,4 @@ services:
     volumes:
       - ./db:/var/lib/mysql
     ports:
-      - 5434:5432
+      - 3306:3306
