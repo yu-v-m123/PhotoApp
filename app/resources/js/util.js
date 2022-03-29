@@ -5,7 +5,6 @@
 */
 
 export function getCookieValue (searchKey) {
-  console.log('test');
   if (typeof searchKey === 'undefined') {
     return ''
   }
@@ -16,7 +15,7 @@ export function getCookieValue (searchKey) {
     const [key, value] = cookie.split('=')
     if (key === searchKey) {
       return val = value
-    } 
+    }
   })
 
   return val
